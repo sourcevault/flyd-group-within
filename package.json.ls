@@ -1,4 +1,4 @@
-name : "flyd.groupwithin"
+name : "flyd-group-within"
 
 author: "joykrishnamondal"
 
@@ -9,11 +9,11 @@ keywords:
   "reactive"
   "livescript"
 
-homepage:"https://github.com/sourcevault/flyd.groupwithin/readme.md"
+homepage:"https://github.com/sourcevault/flyd-group-within/readme.md"
 
 bugs:
 
-  url:"https://github.com/sourcevault/flyd.groupwithin/issues"
+  url:"https://github.com/sourcevault/flyd-group-within/issues"
 
 license:"MIT"
 
@@ -23,7 +23,7 @@ repository:
 
   type:"git"
 
-  url:"https://github.com/sourcevault/flyd.groupwithin"
+  url:"https://github.com/sourcevault/flyd-group-within"
 
 
 description : "buffer stream values within x millisecond"
@@ -32,35 +32,20 @@ version : "0.0.1"
 
 dependencies:
 
-  "is-plain-object":"2.0.4"
-
-  "@most/create":"2.0.1"
-
-  "most":"1.0.1"
-
-  "binapi":"0.0.5"
-
   "chalk":"2.4.1"
-
-  "stack-trace":"*"
 
   "ramda":"*"
 
-  "array2d":"*"
-
-  "cli-table":"*"
-
-  "tty-table":"*"
-
-  "lodash.isboolean":"*"
-
-  "lodash.isfunction":"*"
 
 
 devDependencies:
 
-  livescript:"1.4.0"
+  livescript:"1.5.0"
 
 engines:
 
   node:"9.6.1"
+
+scripts:
+
+  test:"node test.js"

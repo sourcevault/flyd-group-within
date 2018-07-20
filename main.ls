@@ -56,9 +56,10 @@ validate-input = (time,stream) ->
 
   main time,stream
 
+curried-validate-input = flyd.curryN 2,validate-input
 
-validate-input.default = validate-input
+curried-validate-input.default = curried-validate-input
 
-validate-input.esModule = true
+curried-validate-input.esModule = true
 
-module.exports = validate-input
+module.exports = curried-validate-input

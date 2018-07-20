@@ -1,7 +1,7 @@
-
-
-
 #  ```flyd-group-within```
+
+
+[![Build Status](https://travis-ci.org/sourcevault/flyd-group-within.svg?branch=dev)](https://travis-ci.org/sourcevault/flyd-group-within)
 
 ```
                                      500 ms        500 ms
@@ -12,7 +12,7 @@ groupWithin(500,stream):          [----------.------------.-----]
 downstream:                                  [1,2,3]      [5,6]
 ```
 
-*install .. *
+*install..*
 
 ```
 npm install flyd-group-within
@@ -44,7 +44,7 @@ groupWithin(send,500)
 
 ```
 
-***Why ? ..***
+### Why ? ..
 
 **Lower Bound Buffering**
 
@@ -54,7 +54,7 @@ groupWithin(send,500)
 
 - you have a `send` function that can be used to send the data.
 
-- If the `send` function is called every < 200ms, by definition there will be backpressure which if left unresolved will cause the **recieving** server to either run of memory, be unresponsive or in the worst case crash.
+- If the `send` function is called every *< 200ms*, by definition there will be backpressure which if left unresolved will cause the **recieving** server to either run of memory, be unresponsive or in the worst case crash.
 
 - A simple protective measure is to multiplex multiple `send` operation into a single packet minimizing the handshake overhead - it's the same principal of using trains and buses to reduce road traffic.
 
@@ -66,10 +66,11 @@ Any type of `IO` where there is an constant overhead of doing the `IO` itself ca
 
 **GUI IO Time Slicing**
 
+
 Double mouse click is a good example of this application, buffer *all* mouse clicks in a 200ms windows, if there are 2 mouse clicks within a 200ms window, it becomes a double click, 3 mouse click becomes a triple click, so on and so on . . 
 
 I am sure it can be used in other ways that others are better cable of finding out than me, if you would like to add your usecase do not hesitate to submit a pull request.
 
 ## LICENCE
- 
-- Code and documentation is released under MIT Licence, see [LICENSE](https://github.com/sourcevault/flyd-group-within/blob/dist/LICENCE) for details.
+
+Code and documentation is released under MIT Licence, see [LICENSE](https://github.com/sourcevault/flyd-group-within/blob/dist/LICENCE) for details.

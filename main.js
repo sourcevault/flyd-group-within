@@ -32,7 +32,7 @@ validateInput = function(time, stream){
     inform.invalidValueForTime(data);
     return null;
   }
-  return main(stream, time);
+  return main(time, stream);
 };
 validateInput['default'] = validateInput;
 validateInput.esModule = true;

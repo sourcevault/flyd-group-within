@@ -1,4 +1,3 @@
-
 MODULE_NAME = "flyd-group-within"
 
 group-within = require "./main.js"
@@ -18,6 +17,7 @@ fail = (num) !->
 #  TEST TYPE :: Catch Input Errors
 
 # # <| TEST 1 |>
+console.log "<| TEST 1 |>"
 
 
 ret = group-within null,send
@@ -27,6 +27,7 @@ if not (ret is null)
   fail 1
 
 # # <| TEST 2 |>
+console.log "<| TEST 2 |>"
 
 ret = group-within {},send
 
@@ -38,6 +39,7 @@ if not (ret is null)
 
 
 # # <| TEST 3 |>
+console.log "<| TEST 3 |>"
 
 ret = group-within -100,send
 
@@ -46,6 +48,7 @@ if not (ret is null)
   fail 3
 
 # # <| TEST 4 |>
+console.log "<| TEST 4 |>"
 
 ret = group-within [10],send
 
@@ -54,6 +57,7 @@ if not (ret is null)
   fail 4
 
 # # <| TEST 5 |>
+console.log "<| TEST 5 |>"
 
 ret = group-within true,send
 
@@ -62,6 +66,7 @@ if not (ret is null)
   fail 5
 
 # # <| TEST 6 |>
+console.log "<| TEST 6 |>"
 
 ret = group-within undefined,send
 
@@ -70,6 +75,7 @@ if not (ret is null)
   fail 6
 
 # # <| TEST 7 |>
+console.log "<| TEST 7 |>"
 
 ret = group-within !-> , send
 
@@ -78,6 +84,7 @@ if not (ret is null)
   fail 7
 
 # # <| TEST 8 |>
+console.log "<| TEST 8 |>"
 
 ret = group-within 100,undefined
 
@@ -86,6 +93,7 @@ if not (ret is null)
   fail 8
 
 # # <| TEST 9 |>
+console.log "<| TEST 9 |>"
 
 
 ret = group-within.default undefined,100
@@ -99,12 +107,13 @@ if not (ret is null)
 
 # # <| TEST 10 |>
 
+console.log "<| TEST 10 |>"
+
 flyd = require "flyd"
 
 wait = (t,f) -> setTimeout f,t
 
 send = flyd.stream!
-
 do
 
   <- wait 0
@@ -159,8 +168,7 @@ vals = []
 group-within  1000,send
 
 .map (x) ->
-
-   vals.push x
+  vals.push x
 
 
 

@@ -54,12 +54,11 @@ validate-input = (time,stream) ->
 
     return null
 
-  main stream,time
+  main time,stream
 
 
 validate-input.default = validate-input
 
 validate-input.esModule = true
-
 
 module.exports = validate-input

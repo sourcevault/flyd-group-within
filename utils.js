@@ -1,9 +1,10 @@
-var _, chalk, x$, data, y$, color, inform, printTypeError, isPostiveNumber;
+var MODULE_NAME, _, chalk, x$, data, y$, color, inform, printTypeError, isPostiveNumber;
+MODULE_NAME = "flyd-group-within";
 _ = require("ramda");
 chalk = require("chalk");
 x$ = data = {};
-x$.name = "flyd-group-within";
-x$.readmeURL = "github.com/sourcevault/flyd-group-within/readme.md";
+x$.name = MODULE_NAME + "";
+x$.readmeURL = "github.com/sourcevault/" + MODULE_NAME + "/readme.md";
 x$.flydURL = "github.com/paldepind/flyd";
 y$ = color = {};
 y$.highlight = chalk.bold.yellow;

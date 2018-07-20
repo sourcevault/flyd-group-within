@@ -5,42 +5,52 @@ fail = function(num){
   console.error("[TEST ERROR] originating from module [ github.com/sourcevault/" + MODULE_NAME + " ]\\n\t - 'npm test' failed at TEST " + num + ". \n");
   process.exitCode = 1;
 };
+console.log("<| TEST 1 |>");
 ret = groupWithin(null, send);
 if (!(ret === null)) {
   fail(1);
 }
+console.log("<| TEST 2 |>");
 ret = groupWithin({}, send);
 if (!(ret === null)) {
   fail(2);
 }
+console.log("<| TEST 3 |>");
 ret = groupWithin(-100, send);
 if (!(ret === null)) {
   fail(3);
 }
+console.log("<| TEST 4 |>");
 ret = groupWithin([10], send);
 if (!(ret === null)) {
   fail(4);
 }
+console.log("<| TEST 5 |>");
 ret = groupWithin(true, send);
 if (!(ret === null)) {
   fail(5);
 }
+console.log("<| TEST 6 |>");
 ret = groupWithin(undefined, send);
 if (!(ret === null)) {
   fail(6);
 }
+console.log("<| TEST 7 |>");
 ret = groupWithin(function(){}, send);
 if (!(ret === null)) {
   fail(7);
 }
+console.log("<| TEST 8 |>");
 ret = groupWithin(100, undefined);
 if (!(ret === null)) {
   fail(8);
 }
+console.log("<| TEST 9 |>");
 ret = groupWithin['default'](undefined, 100);
 if (!(ret === null)) {
   fail(9);
 }
+console.log("<| TEST 10 |>");
 flyd = require("flyd");
 wait = function(t, f){
   return setTimeout(f, t);

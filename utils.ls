@@ -1,3 +1,4 @@
+MODULE_NAME = "flyd-group-within"
 
 _ = require "ramda"
 
@@ -5,9 +6,9 @@ chalk = require "chalk"
 
 data = {}
 
-  ..name =  "flyd-group-within"
+  ..name =  "#{MODULE_NAME}"
 
-  ..readmeURL = "github.com/sourcevault/flyd-group-within/readme.md"
+  ..readmeURL = "github.com/sourcevault/#{MODULE_NAME}/readme.md"
 
   ..flydURL = "github.com/paldepind/flyd"
 

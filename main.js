@@ -1,4 +1,4 @@
-var flyd, ref$, isPostiveNumber, inform, wait, main, validateInput;
+var flyd, ref$, isPostiveNumber, inform, wait, main, validateInput, curriedValidateInput;
 flyd = require("flyd");
 ref$ = require("./utils.js"), isPostiveNumber = ref$.isPostiveNumber, inform = ref$.inform;
 wait = function(t, f){
@@ -34,6 +34,7 @@ validateInput = function(time, stream){
   }
   return main(time, stream);
 };
-validateInput['default'] = validateInput;
-validateInput.esModule = true;
-module.exports = validateInput;
+curriedValidateInput = flyd.curryN(2, validateInput);
+curriedValidateInput['default'] = curriedValidateInput;
+curriedValidateInput.esModule = true;
+module.exports = curriedValidateInput;

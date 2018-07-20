@@ -3,6 +3,8 @@
 
 #  ```flyd-group-within```
 
+[![Build Status](https://travis-ci.org/sourcevault/flyd-group-within.svg?branch=dev)](https://travis-ci.org/sourcevault/flyd-group-within)
+
 ```
                                      500 ms        500 ms
 (S = start, E = End) Timer          S        E    S       E
@@ -46,7 +48,7 @@ groupWithin(send,500)
 
 ***Why ? ..***
 
-**Lower Bound Buffering**
+1. **Lower Bound Buffering**
 
 - Lets say you are sendind data to a server over HTTP. 
 
@@ -64,7 +66,7 @@ Any type of `IO` where there is an constant overhead of doing the `IO` itself ca
 `setTimeout` also does not give a hard garantee regarding dispatch time - you can observe it when `send` operations are queud in the timeout boundaries of `flyd-group-within`, but that is besides the point since no system that does cooperative concurrency will give you that anyway. Just make sure your callbacks in the main eventloops is not blocking or running a long loop.
 
 
-**GUI IO Time Slicing**
+2. **GUI IO Time Slicing**
 
 Double mouse click is a good example of this application, buffer *all* mouse clicks in a 200ms windows, if there are 2 mouse clicks within a 200ms window, it becomes a double click, 3 mouse click becomes a triple click, so on and so on . . 
 

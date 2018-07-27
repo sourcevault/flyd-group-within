@@ -35,7 +35,7 @@ setTimeout (function(){send(3)},300)
 setTimeout (function(){send(4)},1000)
 setTimeout (function(){send(5)},1100)
 
-groupWithin(send,500)
+groupWithin(500,send)
 .map function (x){
    console.log(x) 
 }
